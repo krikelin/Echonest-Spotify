@@ -26,7 +26,7 @@ Now to slipstream my search with the EchoNest database, I now use my own module 
 				
 				...
 				
-				var search = new echonest.Search("DBRXWR0QJSWGJLNST", {
+				var search = new echonest.Search(YOUR_ECHONEST_API_KEY, {
 				artist_start_year_after:1991,
 					artist_end_year_before:2012
 				}, {pageSize:30});
