@@ -18,14 +18,17 @@ In my app time machine, I previously used the models.Search like this
 				
 Now to slipstream my search with the EchoNest database, I now use my own module 'echonest':
 				
+				
+				...
+				
 				// Import echonest
 				var echonest = sp.require("sp://timemachine/scripts/api/echonest");
 				
 				...
 				
 				var search = new echonest.Search("DBRXWR0QJSWGJLNST", {
-				/*	artist_start_year_after:year,
-					artist_end_year_before:end*/
+				artist_start_year_after:1991,
+					artist_end_year_before:2012
 				});
 				search.observe(models.EVENT.CHANGE, function() {
 					
@@ -36,3 +39,6 @@ Now to slipstream my search with the EchoNest database, I now use my own module 
 					createPlaylist(playlist, params);
 					
 				});
+				search.appendNext();
+				
+				...
