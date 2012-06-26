@@ -29,7 +29,7 @@ Now to slipstream my search with the EchoNest database, I now use my own module 
 				var search = new echonest.Search("DBRXWR0QJSWGJLNST", {
 				artist_start_year_after:1991,
 					artist_end_year_before:2012
-				});
+				}, {pageSize:30});
 				search.observe(models.EVENT.CHANGE, function() {
 					
 					search.tracks.forEach(function(track) {
